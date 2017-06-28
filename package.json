@@ -1,0 +1,25 @@
+{
+  "name": "gmapsplotting",
+  "version": "1.0.0",
+  "description": "plot markers on googlemaps based on csv input",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathanczx/GMapsPlotting.git"
+  },
+  "author": "Jonathan Chan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonathanczx/GMapsPlotting/issues"
+  },
+  "homepage": "https://github.com/jonathanczx/GMapsPlotting#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "multiparty": "^4.1.3",
+    "nodemon": "^1.11.0"
+  }
+}

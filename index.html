@@ -4,13 +4,24 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Google Maps Plotting Challenge</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="css/styles.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
   <h1> Plot a map!</h1>
   <input type="file" id="csvFile" accepts=".csv" />
+  <input type="button" id="submit" value="Plot Map!"/>
+  <hr/>
+  <div id="map"></div>
 
+    
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="js/csvToJson.js"></script>
+<!--   <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAl3tU38trgIfocuUGr7irynTcnYD3aZpA&callback=initMap">
+  </script>
+  <script src="js/maps.js"></script> -->
+  
 </body>
 </html>
