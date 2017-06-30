@@ -1,0 +1,5 @@
+AginicX,"135 Wickham Terrace, Spring Hill QLD 4000"
+Espresso Garage,"176 Grey St, South Brisbane QLD 4101"
+Cafe Dockside,"35 Ferry St, Kangaroo Point QLD 4169"
+Wicked Corner Cafe,"2/166 Wickham Terrace, Spring Hill QLD 4000"
+Coffee Iconic,"340 George Street, Brisbane QLD 4000"
