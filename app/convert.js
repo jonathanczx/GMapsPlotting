@@ -23,6 +23,5 @@ module.exports.csvToJson = function(text){
     //
     result.push(obj);
   }
-  console.log(result);
   return JSON.stringify(result);
 };

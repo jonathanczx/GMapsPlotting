@@ -9,25 +9,26 @@
   <link href="css/styles.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-  <section class="col-lg-6">
-    <h1> Plot a map!</h1>
-    <input type="file" id="csvFile" name="file" accepts=".csv"/>
-    <span id="status"></span>
+  <section class="row">
+    <div class="col-lg-6">
+      <h1> Plot a map!</h1>
+      <input type="file" id="csvFile" name="file" accepts=".csv"/>
+      <span id="status"></span>
+    </div>
+    <div class="col-lg-6">
+      <table id="addressList">
+        
+      </table>
+    </div>
   </section>
-  <section class="col-lg-6">
-    <table id="addressList">
-      
-    </table>
+  <section class="row">
+    <div class="col-lg-12 mapContainer">
+      <div id="map"></div>
+    </div>
   </section>
-  <div id="map"></div>
-
-    
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
- <!--  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAl3tU38trgIfocuUGr7irynTcnYD3aZpA&callback=initMap">
-  </script>
-  <script src="app/maps.js"></script> -->
-  <script src="js/index.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" defer></script>
+  <script src="js/index.js" defer></script>
+  <!-- <script src="app/maps.js"></script>&callback=initMap -->
+  
 </body>
 </html>
