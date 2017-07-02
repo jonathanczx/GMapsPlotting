@@ -20,7 +20,6 @@ router.get('/', function(req, res){
 });
 
 //post function to upload file and write json file.
-// router.post('/', type , uploadController.uploadCsv);
 router.post('/upload', upload.single('file'), function(req, res){
   //assign input file
   var file = req.file;
@@ -30,22 +29,6 @@ router.post('/upload', upload.single('file'), function(req, res){
   var jsonData = convert.csvToJson(csvData);
   res.json(jsonData);
 });
-
-// router.post('/geocode', jsonParser, function(req, res){
-//   console.log("RequBody", req.body); //dont know this part
-//   var reqAddress = req.body;
-//   var i = 0;
-//   var apiKey = "AIzaSyCfCdK6AzQ-qPV0Xd7x0HmzY-Lvlb82VIs";
-//   for (i; i < reqAddress.length; i++){
-//     $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+addresses[x]+'&key=' + apiKey,
-//      null,
-//      function(data){
-//       console.log(data);
-//       reqAddress[i].result = data;
-//      });
-//   }
-//   res.json(reqAddress);
-// });
 
 //export router
 module.exports = router;

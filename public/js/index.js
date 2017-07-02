@@ -28,7 +28,8 @@ $(document).ready(function(){
       contentType: false,
       success: function(res){
         //successful request
-        $("#status").empty().text(res);
+        $("#status").empty().text("CSV parsed")
+        printTable(res);
         callback(res);
         addrToLatLng(jsonData, jobID);
       },
@@ -47,6 +48,7 @@ var jsonData;
 var markers = [];
 
 
+//initMap callback
 function initMap(){
   var options = {
       zoom: 8,
@@ -56,6 +58,27 @@ function initMap(){
   map = new google.maps.Map(document.getElementById('map'), options);
   
   
+};
+
+//Print results to a table
+function printTable(res){
+  var result = JSON.parse(res);
+  //headers:
+  var headers = "<tr>";
+  for(var h in result[0]){
+
+    headers = headers + "<th>" + h + "</th>";
+  };
+  headers = headers + "</tr>";
+  $('#result').append(headers);
+  jQuery.each(result, function(key, item){
+    var row = "<tr>";
+    for(var d in item){
+        row = row + "<td>" + item[d] + "</td>";
+      };
+    row = row + "</tr>";
+    $('#result').append(row);
+  });
 };
 
 //convert address to coordinates
@@ -68,28 +91,22 @@ function addrToLatLng(address, response){
     var addr = jsonAddress[i].address;
     geocoder.geocode({'address': addr}, function(results, status){
       if (status === 'OK'){
-        console.log(results);
         markers.push(
           new google.maps.Marker({
             position: results[0].geometry.location,
             map: map,
             animation: google.maps.Animation.DROP
-          }));           
+          }));
+        $("#status").empty().text("Markers Retrieved");           
       } else {
         console.log('geocode was not successful: ' + status);
-      }
+      };
     });
   };
-  console.log(response);
-  callbackGeocode(response);
 };
 
 //callback function to store ajax response in jsonData
 function callback(response){
   jsonData = response;
-}
-
-function callbackGeocode(response){
-  jobID = response;
 }
 
